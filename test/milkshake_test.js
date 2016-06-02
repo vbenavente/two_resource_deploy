@@ -15,7 +15,7 @@ require('../index');
 
 describe('Testing CRUD routes MilkShake', () => {
   after((done) => {
-    process.env.MONGOLAB_URI = dbPort;
+    process.env.MONGODB_URI = dbPort;
     mongoose.connection.db.dropDatabase(() => {
       done();
     });
