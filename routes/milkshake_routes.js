@@ -25,7 +25,7 @@ milkShakeRouter.post('/', jsonParser, (req, res, next) => {
 
 milkShakeRouter.put('/', jsonParser, (req, res, next) => {
   let _id = req.body._id;
-  MilkShake.findOneAndUpdate({_id}, req.body, (err) => {
+  MilkShake.findOneAndUpdate({_id: _id}, req.body, (err) => {
     if(err) return next(err);
     let message = 'successfully updated';
     res.json({message});
