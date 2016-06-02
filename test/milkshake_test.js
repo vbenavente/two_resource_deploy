@@ -8,9 +8,9 @@ chai.use(chaiHTTP);
 
 const expect = chai.expect;
 const request = chai.request;
-const dbPort = process.env.MONGOLAB_URI;
+const dbPort = process.env.MONGODB_URI;
 
-process.env.MONGOLAB_URI = 'mongodb://localhost/milkshake_test_db';
+process.env.MONGODB_URI = 'mongodb://localhost/milkshake_test_db';
 require('../index');
 
 describe('Testing CRUD routes MilkShake', () => {
