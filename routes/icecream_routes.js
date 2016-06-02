@@ -25,7 +25,7 @@ iceCreamRouter.post('/', jsonParser, (req, res, next) => {
 
 iceCreamRouter.put('/', jsonParser, (req, res, next) => {
   let _id = req.body._id;
-  IceCream.findOneAndUpdate({_id: _id}, req.body, (err) => {
+  IceCream.findOneAndUpdate({_id}, req.body, (err) => {
     if(err) return next(err);
     let message = 'successfully updated';
     res.json({message});
