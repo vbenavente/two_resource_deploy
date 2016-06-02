@@ -3,3 +3,6 @@
 **/*.min.js
 /*.md
 /package.json
+/Procfile
+/npm-debug.log
+/*.bak
